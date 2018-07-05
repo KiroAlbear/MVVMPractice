@@ -36,7 +36,7 @@
             android:layout_marginRight="8dp"
             android:layout_marginStart="24dp"
             android:background="@color/Wheat"
-            android:text= "@{Result.num1TextViewListner}"
+            android:text= "@{Result.num1}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/num2Text"
             app:layout_constraintHorizontal_bias="0.5"

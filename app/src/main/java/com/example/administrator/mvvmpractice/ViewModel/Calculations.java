@@ -14,7 +14,7 @@ import com.example.administrator.mvvmpractice.Model.NumbersStorage;
 
 public class Calculations  extends ViewModel {
 
-    private String num1;
+    public  String num1="5";
     private String num2;
     private String sum;
     public ObservableField<String> num1TextViewListner= new ObservableField<>();
@@ -22,19 +22,12 @@ public class Calculations  extends ViewModel {
     public ObservableField<String> sumTextViewListner= new ObservableField<>();
 
 
-    public Calculations() {
-        this.num1 = num1;
-        this.num2 = num2;
-
-    }
-
     public void onSumClick(View view){
 
 
 
         try{
-
-            sumTextViewListner.set(num1TextViewListner.get());
+            sumTextViewListner.set(num1);
         }
         catch (Exception e){
 
