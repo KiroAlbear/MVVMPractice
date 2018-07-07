@@ -3,5 +3,6 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
-    <color name="Wheat">#fffdda</color>
+    <color name="BlueSky">#b83dc5f2</color>
+    <color name="Black">#353131</color>
 </resources>

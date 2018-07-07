@@ -18,7 +18,8 @@ public class MainActivity extends AppCompatActivity {
     TextView num1text;
     TextView num2text;
     Button button;
- private ActivityMainBinding activityMainBinding;
+     private ActivityMainBinding activityMainBinding;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

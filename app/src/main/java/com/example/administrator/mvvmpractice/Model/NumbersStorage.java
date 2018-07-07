@@ -4,7 +4,7 @@ import android.databinding.BaseObservable;
 
 import java.util.Observable;
 
-public class NumbersStorage extends Observable{
+public class NumbersStorage extends BaseObservable{
     String num1;
     String num2;
 
@@ -12,6 +12,7 @@ public class NumbersStorage extends Observable{
         this.num1 = num1;
         this.num2 = num2;
     }
+
 
     public String getNum1() {
         return num1;

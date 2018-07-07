@@ -4,7 +4,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <data>
-        <import type="com.example.administrator.mvvmpractice.ViewModel.Calculations" />
+
 <variable
     name="Result"
     type="com.example.administrator.mvvmpractice.ViewModel.Calculations"/>
@@ -18,43 +18,40 @@
         <TextView
             android:id="@+id/num1Text"
             android:layout_width="150dp"
-            android:layout_height="27dp"
+            android:layout_height="29dp"
             android:layout_marginBottom="60dp"
             android:layout_marginLeft="32dp"
             android:layout_marginStart="32dp"
-            android:text="@{Result.sumTextViewListner}"
-            android:background="@color/Wheat"
+            android:background="@color/BlueSky"
+
+            android:text="@{Result.SumObservable}"
             app:layout_constraintBottom_toTopOf="@+id/num1Text2"
             app:layout_constraintStart_toStartOf="parent" />
 
         <EditText
-            android:id="@+id/num1Text2"
-            android:layout_width="150dp"
-            android:layout_height="50dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginLeft="24dp"
-            android:layout_marginRight="8dp"
-            android:layout_marginStart="24dp"
-            android:background="@color/Wheat"
-            android:text= "@{Result.num1}"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/num2Text"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.338" />
+        android:id="@+id/num1Text2"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+
+        android:background="@color/BlueSky"
+        android:text= "@={Result.Num1Observable}"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/num2Text"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.338" />
 
         <EditText
             android:id="@+id/num2Text"
             android:layout_width="150dp"
             android:layout_height="50dp"
-            android:layout_marginEnd="28dp"
-            android:layout_marginRight="28dp"
-            android:background="@color/Wheat"
+
+            android:background="@color/BlueSky"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
-            android:text= "@{Result.num2TextViewListner}"
+            android:text= "@={Result.Num2Observable}"
             app:layout_constraintStart_toEndOf="@+id/num1Text"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.338" />
@@ -62,15 +59,13 @@
         <Button
             android:id="@+id/button"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginRight="8dp"
-            android:layout_marginStart="8dp"
+            android:layout_height="50dp"
+
             android:layout_marginTop="52dp"
-            android:text="Sum"
             android:clickable="true"
-            android:onClick="@{Result::onSumClick}"
+
+            android:onClickListener="@{Result::onSumClick}"
+            android:text="Sum"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/num1Text2" />
